@@ -28,6 +28,7 @@ runs:
         token_format: access_token
         create_credentials_file: false
     - name: Generate .npmrc
+      shell: bash
       run: |
         cat > .npmrc <<EOF
         @${{ inputs.scope }}:registry=https://${{ inputs.region }}-npm.pkg.dev/${{ inputs.project }}/${{ inputs.repository }}/
